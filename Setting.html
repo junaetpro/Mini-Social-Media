@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmallNet - Setting</title>
+    <link rel="stylesheet" href="style.css">
+        <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="setting_section">
+        <div class="logo_area">
+            <a class="logo" href="Index.html">Small Net</a>
+        </div>
+        <div class="st_menu_content_area">
+            <div class="menu">
+                <ul>
+                    <li><a href="Index.html"><i class="ri-home-3-line"></i> Home</a></li>
+                    <li><span class="active" data-filter="profile"> <i class="ri-user-3-line"></i> Profile</span></li>
+                    <li><span data-filter="post"> <i class="ri-edit-box-line"></i> Posts</span></li>
+                    <li><span data-filter="event"><i class="ri-calendar-event-line"></i> Events</span></li>
+                    <li><span data-filter="theme"><i class="ri-palette-line"></i> Theme</span></li>
+                    <li><span><i class="ri-logout-circle-r-line"></i> Log Out</span></li>
+                </ul>
+            </div>
+            <div class="content_box">
+                <div class="show_box profile active">
+                    <h2>profile</h2>
+
+
+
+
+                </div>
+                <div class="show_box post">
+                    <h2>post</h2>
+
+
+
+                </div>
+                <div class="show_box event">
+                    <h2>event</h2>
+
+
+
+
+                </div>
+                <div class="show_box theme">
+                    <h2>Theme</h2>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var st_menu_btn= document.querySelectorAll(".st_menu_content_area .menu ul li span");
+        var st_content= document.querySelectorAll(".st_menu_content_area .content_box div")
+        st_menu_btn.forEach((btn)=>{
+            btn.addEventListener("click", (e)=>{
+                const filter= e.target.dataset.filter;
+                
+                st_menu_btn.forEach((btnn)=>{
+                    btnn.classList.remove("active")
+                })
+                e.target.classList.add("active")
+
+                st_content.forEach((container)=>{
+                    if(container.classList.contains(filter)){
+                       container.style.display="block"; 
+                    }else{
+                        container.style.display="none" ;
+                    }
+                })
+
+            })
+        })
+
+
+    </script>
+
+
+    
+</body>
+</html>

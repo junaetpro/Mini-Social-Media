@@ -32,9 +32,14 @@ h4{
     padding: 10px 15px;
     background: linear-gradient(#d62828, #f77f00);
 }
+body{
+    background-color: var(--bg-web);
+}
+html{
+    scroll-behavior: smooth;
+}
 
 .main_body_section{
-    background-color: var(--bg-web);
     width: 100%;
     height: 100vh;
     display: grid;
@@ -270,6 +275,23 @@ h4{
     opacity: 1;
     transition: .3s;
 }
+
+.main_body_section .content .story_box .box .profile_photo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px #000;
+
+}
+.main_body_section .content .story_box .box .profile_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .main_body_section .content .story_box .box:hover .overlay{
     opacity: 0;
 }
@@ -422,3 +444,75 @@ flex-basis: 28%;
     flex-basis: 75%;
 }
 
+/*=======Setting==========*/
+.setting_section{
+    width: 100%;
+    padding: 7px;
+}
+.setting_section .logo_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    
+}
+.setting_section .logo_area .logo{
+    font-size: 25px;
+    text-decoration: none;
+    color: #d62828;
+    font-weight: 800;
+}
+.setting_section .st_menu_content_area{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 7px;
+    height: calc(100vh - 80px);
+}
+.setting_section .st_menu_content_area .menu{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+}
+.setting_section .st_menu_content_area .menu ul li{
+    
+    transition: .3s;
+    border-bottom: 1px solid #cdd2d7;
+    margin-bottom: 5px;
+    
+}
+.setting_section .st_menu_content_area .menu ul li:hover{
+    background-color: #cdd2d7;
+    border-radius: 10px;
+}
+.setting_section .st_menu_content_area .menu ul li span, .setting_section .st_menu_content_area .menu ul li a{
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+.setting_section .st_menu_content_area .menu ul li span.active{
+    color: #d62828;
+}
+.setting_section .st_menu_content_area .menu ul li i{
+    margin-right: 10px;
+    font-size: 18px;
+}
+.setting_section .st_menu_content_area .menu ul li:hover i{
+    color: #d62828;
+}
+
+.setting_section .st_menu_content_area .content_box{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+}
+.setting_section .st_menu_content_area .content_box .show_box{
+    background-color: #cdd2d7;
+    display: none;
+}
+.setting_section .st_menu_content_area .content_box .show_box.active{
+    display: block;
+}
