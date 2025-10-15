@@ -38,8 +38,8 @@ h4{
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-auto-columns: 250px 1fr 300px;
-    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 250px 1fr 300px;
+    grid-template-rows: auto 1fr;
     gap: 7px;
     padding: 7px;
 }
@@ -48,7 +48,77 @@ h4{
     background-color: #ffffff;
     border-radius: 10px;
     grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 7px;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
 
+}
+.main_body_section .nav .logo_box a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    color: #d62828;
+}
+.main_body_section .nav .search_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_body_section .nav .search_box .search{
+    border: 1px solid #d62828;
+    
+    border-radius: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_body_section .nav .search_box .search .src_inp{
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    padding-left: 5px;
+    border-radius: 20px;
+}
+.main_body_section .nav .search_box .search .src_btn{
+    background-color: #90e0ef;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+
+}
+.main_body_section .nav .menu_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_body_section .nav .menu_box .home_icon {
+    font-size: 25px;
+    color: #d62828;
+    text-decoration: none;
+}
+.main_body_section .nav .menu_box a{
+    margin: 0 7px;
+}
+.main_body_section .nav .menu_box a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 7px;
+}
+.main_body_section .nav .menu_box .logout_text{
+    font-size: 16px;
+    text-decoration: none;
+}
+.main_body_section .nav .menu_box .logout_text i{
+    color: #d62828;
+    font-size: 20px;
 }
 .main_body_section .left_sidebar{
     background-color: #ffffff;
@@ -352,8 +422,3 @@ flex-basis: 28%;
     flex-basis: 75%;
 }
 
-.main_body_section .footer{
-    background-color: #ffffff;
-    border-radius: 10px;
-    grid-column: 1/4;
-}
