@@ -548,3 +548,79 @@ flex-basis: 28%;
 .setting_section .st_menu_content_area .content_box .show_box.active{
     display: block;
 }
+
+.fulldisplay_story_popup_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+
+.fulldisplay_story_popup_area .story_popup{
+    
+    height: 70vh;
+    width: 60%;
+    background-color: #00000073;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #000;
+    display: flex;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.fulldisplay_story_popup_area .story_popup img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.fulldisplay_story_popup_area .story_popup .close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.fulldisplay_story_popup_area .story_popup .left{
+    position: absolute;
+    top: 46%;
+    left: 0;
+    height: 50px;
+    width: 30px;
+}
+.fulldisplay_story_popup_area .story_popup .right{
+    position: absolute;
+    top: 46%;
+    right: 0;
+    height: 50px;
+    width: 30px;
+}
+.fulldisplay_story_popup_area .story_popup .close i, .fulldisplay_story_popup_area .story_popup .left i, .fulldisplay_story_popup_area .story_popup .right i{
+    font-size: 16px;
+}
+.fulldisplay_story_popup_area .story_popup .profile_photo{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    border: 2px solid #d62828;
+
+}
